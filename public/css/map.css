@@ -18,6 +18,16 @@
         font-size: 2em;
         text-align: center;
     }
+    .identity
+    {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     .warpper
     {
         z-index: 888;
@@ -230,11 +240,13 @@
     {
         display: flex;
         align-items: start;
+        text-align: center!important;
         flex-direction: column;
     }
     .item-name
     {
-        text-align: center;
+        width: 100%;
+        text-align: center!important;
     }
     .vehicle-speed
     {
@@ -316,19 +328,30 @@
 
     label.hamburger
     {
-        z-index: 889;
-        position: relative;
-        display: block;
-        height: 50px;
         width: 50px;
-        /* background-color: #000; */
-        border-radius: 15px;
+        height: 50px;
+        z-index: 889;
+        position: fixed;
+        top: 100px;
+        right: 15px;
+        display: flex;
+        color:#61677C;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 16px;
+        align-items: center;
+        text-decoration: none;
+        justify-content: center;
+        background-color:#EBECF0;
+        text-shadow: 1px 1px 0 #FFF;
+        transition: all 0.2s ease-in-out;
+        box-shadow: -5px -5px 20px #FFF,  5px 5px 20px #BABECC;
     }
         /* Inside label.hamburger */
         label.hamburger > i
         {
             position: absolute;
-            width: 100%;
+            width: 70%;
             height: 2px;
             top: 50%;
             background-color: #000;
@@ -341,7 +364,7 @@
         {
             position: absolute;
             display: block;
-            width: 100%;
+            width: 70%;
             height: 2px;
             left: 50%;
             background-color: #000;
@@ -385,13 +408,6 @@
                 color: #000;
                 width: 100%;
             }
-
-    label.hamburger
-    {
-        position: fixed;
-        top: 15px;
-        right: 15px;
-    }
     /***************** MAP PROPERTIES **********************/
     #map
     {
@@ -435,7 +451,7 @@
     }
     .leaflet-top
     {
-        top: 70%;
+        top: 80%;
         z-index: 889;
     }
     .leaflet-left
@@ -448,17 +464,14 @@
         stroke-dashoffset: 1920;
         animation: dash 20s linear 3s forwards;
     }
-    .logout
+    .logout, .identity
     {
-        position: absolute;
-        top: 85%;
-        left: 95.4%;
         z-index: 889;
-        padding: 16px;
         color:#61677C;
         font-size: 16px;
         cursor: pointer;
         font-weight: bold;
+        padding: 10px 16px;
         text-align: center;
         border-radius: 16px;
         text-decoration: none;
@@ -466,6 +479,10 @@
         text-shadow: 1px 1px 0 #FFF;
         transition: all 0.2s ease-in-out;
         box-shadow: -5px -5px 20px #FFF,  5px 5px 20px #BABECC;
+    }
+    .identity
+    {
+        z-index: 888;
     }
     /******************************** HISTORIC *****************************/
     table
@@ -514,15 +531,18 @@
             justify-content: space-evenly;
         }
     }
+    @media screen and (max-width: 1024px)
+    {
+        .identity
+        {
+            width: 35%;
+        }
+    }
     @media screen and (max-width: 1046px)
     {
         .leaflet-left
         {
             left: 92%;
-        }
-        .logout
-        {
-            left: 92.4%;
         }
         .warpper
         {
@@ -536,19 +556,29 @@
             width: 60%;
         }
     }
+    @media screen and (max-width: 750px)
+    {
+        .identity
+        {
+            width: 45%;
+        }
+    }
     @media screen and (max-width: 734px)
     {
         .leaflet-left
         {
             left: 90%;
         }
-        .logout
-        {
-            left: 91.4%;
-        }
         .warpper
         {
             width: 80%;
+        }
+    }
+    @media screen and (max-width: 572px)
+    {
+        .identity
+        {
+            width: 60%;
         }
     }
     @media screen and (max-width: 550px)
@@ -556,10 +586,6 @@
         .leaflet-left
         {
             left: 85%;
-        }
-        .logout
-        {
-            left: 86.4%;
         }
         .warpper
         {
@@ -582,6 +608,13 @@
             text-align: center;
         }
     }
+    @media screen and (max-width: 435px)
+    {
+        .identity
+        {
+            width: 80%;
+        }
+    }
     @media screen and (max-width: 390px)
     {
         .vehicle
@@ -594,7 +627,10 @@
             justify-content: space-between;
         }
     }
-    @media screen and (max-width: 320px)
+    @media screen and (max-width: 330px)
     {
-
+        .identity
+        {
+            width: 90%;
+        }
     }

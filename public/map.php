@@ -1,4 +1,5 @@
 <?php
+require 'helper.php';
 session_start();
 (!isset($_SESSION['username'])) ?  header("Location: index.php") : null;
 ?>
@@ -31,18 +32,20 @@ session_start();
 </head>
 
 <body>
+  <div id="map"></div>
+
+  <div class="identity">
+    <h3>Connecté : <?= $_SESSION['name'] ?></h3>
+    <a href="deconnexion.php" class="logout">
+      <i class="fas fa-sign-in"></i>
+    </a>
+  </div>
+
   <input id="hamburger" class="hamburger" type="checkbox" />
   <label class="hamburger" for="hamburger">
     <i></i>
-    <text>
-      <close>fermer</close>
-      <open>Menu</open>
-    </text>
   </label>
-  <div id="map"></div>
-  <a href="deconnexion.php" class="logout">
-    <i class="fas fa-sign-in"></i>
-  </a>
+
   <div class="warpper">
     <input class="radio" id="one" name="group" type="radio" checked />
     <input class="radio" id="two" name="group" type="radio" />
@@ -94,6 +97,7 @@ session_start();
       </div>
     </div>
   </div>
+
   <!-- Leaflet CDN dependency -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <!-- Leaflet Location Controller CDN dependency -->

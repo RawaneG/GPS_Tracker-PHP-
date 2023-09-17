@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ejitrace</title>
+  <title>EJtrace</title>
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:500,700&amp;display=swap" />
@@ -13,7 +13,7 @@
 <body>
   <form method="POST" action="connexion.php">
     <div class="segment">
-      <h1>Ejitrace Tracking</h1>
+      <h1>EJtrace Tracking</h1>
     </div>
     <label>
       <input type="text" placeholder="Adresse Email" name="user" />
